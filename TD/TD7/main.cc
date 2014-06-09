@@ -123,6 +123,7 @@ float evalExprPost( string expression )
 	  float valg = p.valeurSommet();p.depiler();
 	  p.empiler(oper2(valg,expr[0],vald));
 	}
+`}
   */
   int a=0,b=0;
   char c;
@@ -154,6 +155,7 @@ float evalExprPost( string expression )
   cout << "la valeur de l'expression  = " << a << endl;
   
 }
+  */
 //- Effectue l'operation [op] avec comme operande gauche [valg] et operande
 //- droite [vald], puis retourne le resultat.
 //- @param valg l'operande gauche.
@@ -161,7 +163,21 @@ float evalExprPost( string expression )
 //- @param vald l'operande droite.
 float oper2( float valg, char op, float vald )
 {
- 
+  float val;
+  switch (op)
+    {
+    case '*': val = valg*vald;
+      break;
+    case '/':
+      assert(vald != 0.0);
+      val = valg/vald;
+      break;
+    case '+': val = valg + vald;
+      break;
+    case '-': val = valg - vald;
+      break;
+    }
+  return val;
 }
 
 // ----------------------------------------------------------------------------
