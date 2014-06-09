@@ -17,4 +17,6 @@ class date {
   int getJour();
   int getMois();
   int getAnnee();
-}
+};
+
+#endif
