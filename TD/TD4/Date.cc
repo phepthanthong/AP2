@@ -51,11 +51,14 @@ Date::getDate( int &j, int &m, int &a ) const
   m = my_mois;
   a = my_annee;
 }
-
+void Date::afficheDate()
+{
+  cout << 
+/*
 string
 Date::toString() const
 {
   return intToString(my_jour)+"/" + intToString(my_mois)
     + "/" +intToString(my_annee);
 }
-
+*/

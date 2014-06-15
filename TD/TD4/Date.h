@@ -15,8 +15,8 @@ public:
   ~Date();
   void setDate( int j, int m, int a );
   void getDate( int &j, int &m, int &a ) const;
-  string toString() const;
- 
+  //string toString() const;
+  void afficheDate();
 private:
   int my_jour;
   int my_mois;
