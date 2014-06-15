@@ -3,23 +3,25 @@
 
 #include <iostream>
 #include <string>
+#include <sstream>
 using namespace std;
 
 class Employe {
  private:
   string metier;
   string nomEmploye;
-  //static int numEmploye ;
   int numcode;
  protected:
   static int numEmploye ;
  public:
-  //static int numEmploye ;
   Employe();
   ~Employe();
   Employe(string nom, string leMetier);
 
+  string getNomEmploye()const;
+  int getNumEmploye()const;
   virtual void jeSuis() = 0;
+  //friend ostream & operator<<(ostream &os, const Employe & emp);
 };
 
 #endif
