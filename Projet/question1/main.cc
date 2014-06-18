@@ -31,7 +31,7 @@ int main()
   Liste <Animal> ani;
   saisirAni(ani);
   faireParler(ani);
-    
+  a.compterAnimaux(ani);
     
   /*
   Zoo a;

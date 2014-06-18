@@ -60,3 +60,16 @@ int Zoo::getPhoneZoo()const
   return phoneZoo;
 }
 
+void Zoo::compterAnimaux( Liste <Animal> &a )
+{
+  TAdrAni adr;
+  int compteur = 0;
+  adr = a.adressePremier();
+  while ( adr != a.null() )
+    {
+      compteur++;
+      adr = a.adresseSuivant(adr);
+    }
+  cout << endl << "LE NOMBRE D'ANIMAUX EST: " << compteur << endl;
+}
+      

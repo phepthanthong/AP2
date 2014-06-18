@@ -8,6 +8,8 @@
 #include "cage.h"
 using namespace std;
 
+typedef Liste <Animal>::TIterator TAdrAni;
+
 class Zoo {
  private:
   string nomZoo;
@@ -27,7 +29,7 @@ class Zoo {
   string getAdrZoo()const;
   int getPhoneZoo()const;
 
-  void compterAnimaux();
+  void compterAnimaux( Liste <Animal> &a );
 
 };
 

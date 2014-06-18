@@ -29,7 +29,7 @@ class Cage {
 
   void saisieCage();
   void afficher();
-  void compterAnimaux();
+  //void compterAnimaux();
   
 };
 

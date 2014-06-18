@@ -15,8 +15,9 @@ void affiInfoCage( Liste <Cage> &l );
 // Un cage contient une Liste d'Animaux
 void saisirAni( Liste <Animal> &a );
 void affiInfoAni( Liste <Animal> &a );
+
 void faireParler( Liste <Animal> &a );
-void faireManger( Liste <Animal> &a, Alimentation aliment);
+void faireManger( Liste <Animal> &a );
 // question 1
 void faireManger( Liste <Animal> &listAnimal, Cage &cage );
 void faireParler( Liste <Animal> &listAnimal, Cage &cage );
