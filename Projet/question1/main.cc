@@ -25,16 +25,14 @@ typedef Liste <Animal>::TIterator TAdrAni;
 typedef Liste <Cage>::TIterator TAdrCage;
 int main()
 {
-  Zoo a;
+  Zoo a("Foret africane","415 rue Jean-Michel",83254);
   cout << a << endl;
-
-  Liste <Cage> cage;
-  saisirCage(cage);
-  affiInfoCage(cage);
-
+  
   Liste <Animal> ani;
   saisirAni(ani);
-  affiInfoAni(ani);
+  faireParler(ani);
+    
+    
   /*
   Zoo a;
   a.afficher();

@@ -11,10 +11,10 @@ using namespace std;
 
 class Cage {
  private:
-  //Liste <Animal> listAnimal;
+  
   static int numCage;
   string taille;
-  //Ouvrier ouv;
+  
  public:
   Cage();
   ~Cage();
@@ -30,9 +30,7 @@ class Cage {
   void saisieCage();
   void afficher();
   void compterAnimaux();
-  //Liste <Animal> getListe();
-
-
+  
 };
 
 #endif

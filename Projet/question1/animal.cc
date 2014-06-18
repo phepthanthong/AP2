@@ -42,8 +42,9 @@ Animal &Animal::operator= (const Animal &ani)
 
 ostream & operator<<(ostream &os, const Animal &ani)
 {
-  os << " - Nom de l'animal: " << ani.getNomAnimal() << endl;
+  os << endl << " - Nom de l'animal: " << ani.getNomAnimal() << endl;
   os << " - Son numero: " << ani.getNumero() << endl;
+  os << " - Son type: " << ani.getType() << endl;
   return os;
 
   //os << ouv.jeSuis();
@@ -60,19 +61,18 @@ int Animal::getNumero()const
   return numero;
 }
 
+string Animal::getType()const
+{
+  return quelType;
+}
+
 void Animal::saisieAnimal()
 {
   cout << "Nom de l'Animal ?" << endl;
   cin >> nomAnimal;
   cout << "Numero de l'Animal ?" << endl;
   cin >> numero;
+  cout << "Il est de quel type ?" << endl;
+  cin >> quelType;
 }
-/*
-void Animal::afficherA()
-{
-  cout << "C'est un animal" << endl;
-  cout << "Nom de l'Animal: " << nomAnimal << endl;
-  cout << "Son numero: " << numero << endl;
-  //cout << "Sa date de naissance: " << dateNais << endl;
-}
-*/
+

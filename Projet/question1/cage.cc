@@ -2,9 +2,11 @@
 int Cage::numCage = 0;
 Cage::Cage()
 {
-  cout << " == Constructeur par defaut: Cage" << endl;
+  cout << " == Constructeur par Defaut: Cage" << endl;
   numCage++;
   taille = "NULL";
+  Ouvrier ouv;
+  cout << ouv << endl;
 }
 
 Cage::~Cage()
@@ -37,12 +39,9 @@ Cage &Cage::operator= (const Cage &c)
 
 ostream & operator<<(ostream &os, const Cage &cage)
 {
-  os << " - Son numero: " << cage.getNumCage() << endl;
+  os << " - Numero de la Cage: " << cage.getNumCage() << endl;
   os << " - Sa taille: " << cage.getTaille() << endl;
   return os;
-
-  //os << ouv.jeSuis();
-  //return os;
 }
 
 int Cage::getNumCage()const

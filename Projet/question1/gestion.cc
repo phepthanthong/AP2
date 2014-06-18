@@ -73,3 +73,18 @@ void affiInfoAni( Liste <Animal> &a)
       }
   cout << endl << "FIN D'AFFICHAGE DE LA LISTE" << endl;
 }
+void faireParler( Liste <Animal> &a )
+{
+  TAdrAni adr;
+  int compteur = 0;
+  adr = a.adressePremier();
+  cout << endl << "FAIRE PARLER A TOUS LES ANIMAUX" << endl;
+  while (adr != a.null())
+    {
+      compteur++;
+      cout << "Animal numero " << compteur << " a parle" << endl;
+      adr = a.adresseSuivant(adr);
+    }
+  cout << endl << "LA FONCTION A FAIT PARLER " << compteur << " ANIMAUX" << endl;
+  cout << "FAIREPARLER: TERMINE" << endl;
+}

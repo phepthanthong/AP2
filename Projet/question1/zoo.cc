@@ -39,15 +39,6 @@ Zoo &Zoo::operator= (const Zoo &c)
 
   return *this;
 }
-/*
-string Zoo::jeSuis()
-{
-  ostringstream out;
-  out << "Nom du Zoo: " << nomZoo 
-      << "Son adresse: " << adrZoo 
-      << "Son numero de telephone: " << phoneZoo << endl;
-  return out.str();
-  }*/
 
 ostream & operator<<(ostream &os, const Zoo &zoo)
 {
@@ -55,9 +46,6 @@ ostream & operator<<(ostream &os, const Zoo &zoo)
   os << " - Son adresse: " << zoo.getAdrZoo() << endl;
   os << " - Son numero de telephone: " << zoo.getPhoneZoo() << endl;
   return os;
-
-  //os << ouv.jeSuis();
-  //return os;
 }
 string Zoo::getNomZoo()const
 {
@@ -71,9 +59,4 @@ int Zoo::getPhoneZoo()const
 {
   return phoneZoo;
 }
-void Zoo::afficher()
-{
-  cout << "Nom du Zoo: " << nomZoo << endl;
-  cout << "Adresse du Zoo: " << adrZoo << endl;
-  cout << "Telephone: " << phoneZoo << endl;
-}
+

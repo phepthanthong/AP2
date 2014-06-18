@@ -1,8 +1,8 @@
 #include "ouvrier.h"
-#include <sstream>
+
 Ouvrier::Ouvrier()
 {
-  cout << " == Constructeur par defaut: Ouvrier" << endl;
+  cout << " == Constructeur par Defaut: Ouvrier" << endl;
   nomOuvrier = "NULL";
   //numEmploye++;
   numOuvrier = numEmploye;
@@ -21,6 +21,29 @@ Ouvrier::Ouvrier(string nomO)
   numOuvrier = numEmploye;
 }
 
+Ouvrier::Ouvrier(const Ouvrier &o)
+{
+  numOuvrier = o.numOuvrier;
+  nomOuvrier = o.nomOuvrier;
+}
+
+Ouvrier &Ouvrier::operator= (const Ouvrier &o)
+{
+  if (this != &o)
+    {
+      numOuvrier = o.numOuvrier;
+      nomOuvrier = o.nomOuvrier;
+    }
+  return *this;
+}
+
+ostream & operator<<(ostream &os, const Ouvrier &ouv)
+{
+  os << " - Nom de l'Ouvrier: " << ouv.getNomOuvrier() << endl;
+  os << " - Son numero: " << ouv.getNumOuvrier() << endl;
+  return os;
+}
+
 string Ouvrier::getNomOuvrier()const
 {
   return nomOuvrier;
@@ -29,26 +52,7 @@ int Ouvrier::getNumOuvrier()const
 {
   return numOuvrier;
 }
-/*
-string Ouvrier::jeSuis()
-{
-  ostringstream out;
-  out << "Nom de l'Ouvrier: " << nomOuvrier 
-      << "Son numero: " << numOuvrier 
-      << "Je m'occupe la cage numero: " << cage->getNumCage() << endl;
-  return out.str();
-}
 
-ostream & operator<<(ostream &os, const Ouvrier &ouv)
-{
-  os << "Nom de l'Ouvrier: " << ouv.getNomOuvrier() << endl;
-  os << "Son numero: " << ouv.getNumOuvrier() << endl;
-  return os;
-
-  os << ouv.jeSuis();
-  return os;
-}
-*/
 void Ouvrier::jeSuis()
 {
   cout << "Nom de l'Ouvrier: " << nomOuvrier << endl;

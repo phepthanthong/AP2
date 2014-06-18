@@ -3,9 +3,9 @@
 int Employe::numEmploye = 0;
 Employe::Employe()
 {
-  cout << " == Contructeur par Defaut: Employe" << endl;
-  nomEmploye = "";
-  metier = "";
+  cout << " == Constructeur par Defaut: Employe" << endl;
+  nomEmploye = "NULL";
+  metier = "NULL";
   numEmploye++;
   numcode = numEmploye;
 }

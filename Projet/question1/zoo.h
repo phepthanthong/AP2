@@ -5,15 +5,15 @@
 #include <string>
 #include <sstream>
 #include "Liste.h"
+#include "cage.h"
 using namespace std;
 
-//typedef Liste <Cage>::TIterator TAdrCage;
 class Zoo {
  private:
   string nomZoo;
   string adrZoo;
   int phoneZoo;
-  //Liste <Cage> cage;
+  
  public:
   Zoo();
   Zoo(string nom, string adresse, int telephone);
@@ -27,7 +27,6 @@ class Zoo {
   string getAdrZoo()const;
   int getPhoneZoo()const;
 
-  void afficher();
   void compterAnimaux();
 
 };

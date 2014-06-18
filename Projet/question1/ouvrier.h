@@ -5,25 +5,27 @@
 #include <string>
 #include "employe.h"
 #include "cage.h"
-#include <sstream>
+
 using namespace std;
 
 class Ouvrier: public Employe {
  private:
   string nomOuvrier;
   int numOuvrier;
-  //Cage *cage;
-  
+    
  public:
   Ouvrier();
   ~Ouvrier();
   Ouvrier(string nomO);
 
+  Ouvrier(const Ouvrier &o);
+  Ouvrier &operator= (const Ouvrier &o);
+  friend ostream & operator<<(ostream &os, const Ouvrier & ouv);
+
   string getNomOuvrier()const;
   int getNumOuvrier()const;
   void jeSuis();
 
-  //friend ostream & operator<<(ostream &os, const Ouvrier & ouv);
 };
 
 #endif

@@ -12,6 +12,7 @@ class Animal {
   string nomAnimal;
   Date dateNais;
   int numero;
+  string quelType;
 
  protected:
   static int numAnimal;
@@ -27,11 +28,12 @@ class Animal {
 
   string getNomAnimal()const;
   int getNumero()const;
+  string getType()const;
 
   void saisieAnimal();
-  //virtual void afficherA() = 0;
-  //virtual void faireManger() = 0;
-  //virtual void faireParler() = 0;
+  
+  //void faireManger();
+  //void faireParler(Liste <Animal> ani);
 
 };
 
